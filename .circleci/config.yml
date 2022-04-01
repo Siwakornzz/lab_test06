@@ -49,7 +49,7 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       - run:
           name: Upload to S3
-          command: aws s3 cp function.zip s3://aunaun/function.zip
+          command: aws s3 cp function.zip s3://aunaun2/function.zip
       - run:
           name: Deploy new Lambda
           command: aws lambda update-function-code --function-name *** --s3-bucket aunaun2 --s3-key function.zip
